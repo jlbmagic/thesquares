@@ -17,11 +17,17 @@ body {
 
 .wrapper {
     width: 400;
-    display: grid;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    align-items: baseline;
+    flex-grow: 40px;
+    justify-content: space-around
+        /* grid-gap: 10px;
     grid-template-columns: repeat(10, 100px);
     grid-template-rows: 100px 100px 100px 100px 100px 100px 1000px;
-    grid-auto-flow: row;
+    grid-auto-flow: row; */
 }
 
 
@@ -33,4 +39,20 @@ h1 {
     letter-spacing: -1px;
     line-height: 1;
     text-align: center;
+}
+
+.fadeOut {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+
+.fadeIn {
+    opacity: 1;
+    width: 100px;
+    height: 100px;
+    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+
 }
