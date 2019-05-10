@@ -14,7 +14,27 @@ class Square extends React.Component {
 
 class CreateSquares extends React.Component {
   render() {
-    const things = this.props.list;
+    function shuffle(array) {
+      var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+    const theArray = this.props.list;
+    const things = shuffle(theArray);
     console.log(things);
     const rows = things.map(function(ele, i) {
       var v = ele.value;
@@ -43,7 +63,8 @@ class Game extends React.Component {
       { value: "Work", color: "#48f442" },
       { value: "WorkOut", color: "#403556" },
       { value: "Video Games", color: "#f41f8d" },
-      { value: "Video Games", color: "#f41f8d" }
+      { value: "Video Games", color: "#f41f8d" },
+      { value: "Read", color: "#f4bc42" }
     ];
     return (
       <div className="wrapper">
