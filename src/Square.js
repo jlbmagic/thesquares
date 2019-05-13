@@ -9,18 +9,23 @@ export class Square extends React.Component {
     this.removeItem = this.removeItem.bind(this);
   }
   removeItem(e) {
-    console.log(e);
+    // console.log(e);
     this.props.removeSquare(e);
     this.props.onClickSquare(e);
   }
   render() {
-    // const clickOn = this.props.onClickSquare;
-    // console.log(this.props.id);
+    // console.log(this.props);
     return (
       <button
         className={`box`}
         onClick={() => this.removeItem(this.props.id)}
-        style={{ backgroundColor: this.props.color, color: "#000" }}
+        style={{
+          backgroundColor: this.props.color,
+          color: "#000",
+          width: this.props.width,
+          height: this.props.height,
+          justifyContent: "space-even"
+        }}
       >
         {this.props.value}
       </button>

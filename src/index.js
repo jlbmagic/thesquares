@@ -3,40 +3,28 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { CreateSquares } from "./CreateSquares";
 import { addMethods, callFMScript, initialProps } from "../src/util/api";
+import { SubHeading } from "./SubHeading";
 
-// console.log(initialProps);
 const things = initialProps.data;
-const weekOf = initialProps.weekOf;
-const complete = initialProps.complete;
-console.log(weekOf);
-// const things = [
-//   { id: 1, value: "WorkOut", color: "#403556" },
-//   { id: 2, value: "Work", color: "#48f442" },
-//   { id: 3, value: "Video Games", color: "#f41f8d" },
-//   { id: 4, value: "Video Games", color: "#f41f8d" },
-//   { id: 5, value: "WorkOut", color: "#403556" },
-//   { id: 6, value: "Work", color: "#48f442" },
-//   { id: 7, value: "Video Games", color: "#f41f8d" },
-//   { id: 8, value: "Work", color: "#48f442" },
-//   { id: 9, value: "WorkOut", color: "#403556" },
-//   { id: 10, value: "Video Games", color: "#f41f8d" },
-//   { id: 11, value: "Video Games", color: "#f41f8d" },
-//   { id: 12, value: "Read", color: "#f4bc42" }
-// ];
+export const weekOf = initialProps.weekOf;
+// console.log(initialProps);
+export const complete = initialProps.complete;
+
 class Game extends React.Component {
   componentDidMount() {
     addMethods({
       updateData: parameter => {
         const theData = parameter.data;
-        console.log(theData);
-        this.setState({
-          data: theData
-        });
-        console.log("updated");
-        // console.log(this.setState.data);
-      },
-      updateComplete: parameter => {
         const complete = parameter.complete;
+        const weekOf = parameter.weekOf;
+        // console.log(complete);
+        this.setState({
+          data: theData,
+          weekOf: weekOf,
+          complete: complete,
+          change: true
+        });
+        // console.log(this.state.complete);
       }
     });
   }
@@ -45,7 +33,7 @@ class Game extends React.Component {
     const returnValue = {
       id
     };
-    console.log(id);
+    // console.log(id);
     callFMScript(
       initialProps.fileName,
       initialProps.eventHandler.clickOn,
@@ -56,37 +44,33 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: things
+      data: things,
+      weekOf: weekOf,
+      complete: complete,
+      change: true
     };
     this.removeSquare = this.removeSquare.bind(this);
   }
   removeSquare(square) {
-    // console.log("Remove " + square);
-    // console.log(this.state.data);
     this.setState({
-      data: this.state.data.filter(el => el.id !== square)
+      data: this.state.data.filter(el => el.id !== square),
+      change: false
     });
-    // console.log(this.state.data.length);
   }
 
   render() {
-    // console.log(this.state.data);
-
     return (
       <div>
         <h1>My Time Allocation</h1>
 
-        <span>
-          <p>{weekOf}</p>
-          <p>............................................</p>
-          <p>{complete}</p>
-        </span>
+        <SubHeading weekOf={this.state.weekOf} complete={this.state.complete} />
 
         <div className="wrapper">
           <CreateSquares
             list={this.state.data}
             removeSquare={this.removeSquare}
             onClickSquare={this.clickOn}
+            shuffle={this.state.change}
           />
         </div>
       </div>

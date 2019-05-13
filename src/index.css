@@ -29,7 +29,7 @@ html {
   flex-flow: row wrap;
   align-items: baseline;
   flex-grow: 40px;
-  justify-content: space-even;
+  justify-content: space-around;
   /* grid-gap: 10px;
     grid-template-columns: repeat(10, 100px);
     grid-template-rows: 100px 100px 100px 100px 100px 100px 1000px;

@@ -1,7 +1,10 @@
 import React from "react";
 import { Square } from "./Square";
+
 export class CreateSquares extends React.Component {
   render() {
+    const change = this.props.shuffle;
+    console.log(change);
     function shuffle(array) {
       var currentIndex = array.length,
         temporaryValue,
@@ -21,12 +24,11 @@ export class CreateSquares extends React.Component {
     const theArray = this.props.list;
     const remove = this.props.removeSquare;
     const clickOn = this.props.onClickSquare;
-    // console.log(remove);
-    const things = shuffle(theArray);
-    // console.log(things);
+    const things = change ? shuffle(theArray) : theArray;
     const rows = things.map(function(ele, i) {
       var v = ele.value;
-      // console.log(v);
+      const height = ele.height;
+      const width = ele.width;
       return (
         <Square
           key={ele.id}
@@ -35,6 +37,8 @@ export class CreateSquares extends React.Component {
           color={ele.color}
           removeSquare={remove}
           onClickSquare={clickOn}
+          height={height}
+          width={width}
         />
       );
       // return <h1>Hi</h1>;
