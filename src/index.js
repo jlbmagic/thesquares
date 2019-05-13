@@ -7,6 +7,7 @@ import { addMethods, callFMScript, initialProps } from "../src/util/api";
 // console.log(initialProps);
 const things = initialProps.data;
 const weekOf = initialProps.weekOf;
+const complete = initialProps.complete;
 console.log(weekOf);
 // const things = [
 //   { id: 1, value: "WorkOut", color: "#403556" },
@@ -33,6 +34,9 @@ class Game extends React.Component {
         });
         console.log("updated");
         // console.log(this.setState.data);
+      },
+      updateComplete: parameter => {
+        const complete = parameter.complete;
       }
     });
   }
@@ -71,7 +75,13 @@ class Game extends React.Component {
     return (
       <div>
         <h1>My Time Allocation</h1>
-        <p>{weekOf}</p>
+
+        <span>
+          <p>{weekOf}</p>
+          <p>............................................</p>
+          <p>{complete}</p>
+        </span>
+
         <div className="wrapper">
           <CreateSquares
             list={this.state.data}
