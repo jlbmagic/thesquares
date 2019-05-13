@@ -2,22 +2,39 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { CreateSquares } from "./CreateSquares";
+import { addMethods, callFMScript, initialProps } from "fm-webviewer-bridge";
 
-const things = [
-  { id: 1, value: "WorkOut", color: "#403556" },
-  { id: 2, value: "Work", color: "#48f442" },
-  { id: 3, value: "Video Games", color: "#f41f8d" },
-  { id: 4, value: "Video Games", color: "#f41f8d" },
-  { id: 5, value: "WorkOut", color: "#403556" },
-  { id: 6, value: "Work", color: "#48f442" },
-  { id: 7, value: "Video Games", color: "#f41f8d" },
-  { id: 8, value: "Work", color: "#48f442" },
-  { id: 9, value: "WorkOut", color: "#403556" },
-  { id: 10, value: "Video Games", color: "#f41f8d" },
-  { id: 11, value: "Video Games", color: "#f41f8d" },
-  { id: 12, value: "Read", color: "#f4bc42" }
-];
+// console.log(initialProps);
+const things = initialProps.data;
+const weekOf = initialProps.weekOf;
+console.log(weekOf);
+// const things = [
+//   { id: 1, value: "WorkOut", color: "#403556" },
+//   { id: 2, value: "Work", color: "#48f442" },
+//   { id: 3, value: "Video Games", color: "#f41f8d" },
+//   { id: 4, value: "Video Games", color: "#f41f8d" },
+//   { id: 5, value: "WorkOut", color: "#403556" },
+//   { id: 6, value: "Work", color: "#48f442" },
+//   { id: 7, value: "Video Games", color: "#f41f8d" },
+//   { id: 8, value: "Work", color: "#48f442" },
+//   { id: 9, value: "WorkOut", color: "#403556" },
+//   { id: 10, value: "Video Games", color: "#f41f8d" },
+//   { id: 11, value: "Video Games", color: "#f41f8d" },
+//   { id: 12, value: "Read", color: "#f4bc42" }
+// ];
 class Game extends React.Component {
+  componentDidMount() {
+    // addMethods({
+    //   updateData: parameter => {
+    //     const theData = parameter.data;
+    //     this.setState({
+    //       data: theData
+    //     });
+    //     // console.log("updated");
+    //     // console.log(this.setState.data);
+    //   }
+    // });
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -40,6 +57,7 @@ class Game extends React.Component {
     return (
       <div>
         <h1>My Time Allocation</h1>
+        <p>{weekOf}</p>
         <div className="wrapper">
           <CreateSquares
             list={this.state.data}

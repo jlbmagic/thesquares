@@ -1,0 +1,76 @@
+﻿Timestamp	Filename	Error	Message
+2019-05-12 17:16:42.268 -0400	TimeAllocations.fmp12	0	Import of scripts from clipboard started
+2019-05-12 17:16:42.274 -0400	Load Kanban Board::3::Insert Text::Field	10	Attribute “id” missing.
+2019-05-12 17:16:42.275 -0400	Load Kanban Board::15::Perform Script	114	File reference “Kanban” missing.
+2019-05-12 17:16:42.276 -0400	Load Kanban Board::15::Perform Script	0	Missing file reference “Kanban” created and imported automatically.
+2019-05-12 17:16:42.281 -0400	Load Kanban Board	0	script steps imported : 56
+2019-05-12 17:16:42.283 -0400	Example_Collect Data::2::Go to Related Record	106	Table “Status” missing.
+2019-05-12 17:16:42.283 -0400	Example_Collect Data::2::Go to Related Record	105	Layout “Status” missing.
+2019-05-12 17:16:42.284 -0400	Example_Collect Data::6::Sort Records	102	Field “SortOrder” missing.
+2019-05-12 17:16:42.284 -0400	Example_Collect Data::8::Set Variable	106	Table referred to in the calculation “JSONFormatElements ( "["  & Substitute ( Status::ListOfJson ; "¶" ; ",¶" ) &"]" )” is missing.
+2019-05-12 17:16:42.285 -0400	Example_Collect Data	0	script steps imported : 11
+2019-05-12 17:16:42.287 -0400	Activate License	0	script steps imported : 15
+2019-05-12 17:16:42.288 -0400	Web Viewer	0	script steps imported : 0
+2019-05-12 17:16:42.288 -0400	Public	0	script steps imported : 0
+2019-05-12 17:16:42.289 -0400	-	0	script steps imported : 0
+2019-05-12 17:16:42.290 -0400	Load WebViewer App ( {webViewer; url , initialProps } )::21::Insert Text::Field	10	Attribute “id” missing.
+2019-05-12 17:16:42.294 -0400	Load WebViewer App ( {webViewer; url , initialProps } )	0	script steps imported : 67
+2019-05-12 17:16:42.303 -0400	Execute JavaScript ( { function, parameter, ...} )	0	script steps imported : 73
+2019-05-12 17:16:42.305 -0400	Work Around Windows Length Limit	0	script steps imported : 21
+2019-05-12 17:16:42.306 -0400	-	0	script steps imported : 0
+2019-05-12 17:16:42.306 -0400	Is WebViewer Loading	0	script steps imported : 2
+2019-05-12 17:16:42.307 -0400	Close WebViewer App	0	script steps imported : 5
+2019-05-12 17:16:42.308 -0400	--	0	script steps imported : 0
+2019-05-12 17:16:42.308 -0400	Private	0	script steps imported : 0
+2019-05-12 17:16:42.310 -0400	Get Activate License ({activationName, license})::27::Set Variable	1208	Function referred to in the calculation “JavaScript.Parameter ( "activateLicense" ; $functionParameter ; $callback )” is missing.
+2019-05-12 17:16:42.311 -0400	Get Activate License ({activationName, license})	0	script steps imported : 30
+2019-05-12 17:16:42.312 -0400	Get Deactivate License::8::Set Variable	1208	Function referred to in the calculation “JavaScript.Parameter ( "deactivateLicense" ; "" ; ""  )” is missing.
+2019-05-12 17:16:42.312 -0400	Get Deactivate License	0	script steps imported : 11
+2019-05-12 17:16:42.316 -0400	Compile URL( url ; hash )	0	script steps imported : 43
+2019-05-12 17:16:42.318 -0400	--	0	script steps imported : 0
+2019-05-12 17:16:42.318 -0400	force new inline	0	script steps imported : 4
+2019-05-12 17:16:42.319 -0400	_Inlined::3::Export Field Contents	102	Field “kanban.html” missing.
+2019-05-12 17:16:42.320 -0400	_Inlined	0	script steps imported : 10
+2019-05-12 17:16:42.321 -0400	--	0	script steps imported : 0
+2019-05-12 17:16:42.322 -0400	TimeAllocations.fmp12	0	scripts imported : 18
+2019-05-12 17:16:42.322 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-12 17:17:56.740 -0400	TimeAllocations.fmp12	0	Import of scripts from clipboard started
+2019-05-12 17:17:56.753 -0400	Web Viewer	0	script steps imported : 0
+2019-05-12 17:17:56.753 -0400	Dev	0	script steps imported : 0
+2019-05-12 17:17:56.754 -0400	Set ENV To production	0	script steps imported : 11
+2019-05-12 17:17:56.755 -0400	Set ENV To Beta	0	script steps imported : 11
+2019-05-12 17:17:56.756 -0400	_Display Error	0	script steps imported : 4
+2019-05-12 17:17:56.758 -0400	_Check For WebViewer	0	script steps imported : 13
+2019-05-12 17:17:56.759 -0400	_BaseURL	0	script steps imported : 13
+2019-05-12 17:17:56.761 -0400	_Inlined::3::Export Field Contents	102	Field “inlined” missing.
+2019-05-12 17:17:56.762 -0400	_Inlined	0	script steps imported : 10
+2019-05-12 17:17:56.764 -0400	Set ENV To Development	0	script steps imported : 11
+2019-05-12 17:17:56.765 -0400	Set ENV To Inlined	0	script steps imported : 11
+2019-05-12 17:17:56.766 -0400	--	0	script steps imported : 0
+2019-05-12 17:17:56.767 -0400	Public	0	script steps imported : 0
+2019-05-12 17:17:56.767 -0400	-	0	script steps imported : 0
+2019-05-12 17:17:56.769 -0400	Get Activate License ({activationName, license})::27::Set Variable	1208	Function referred to in the calculation “GoDraw.JavaScript.Parameter ( "activateLicense" ; $functionParameter ; $callback )” is missing.
+2019-05-12 17:17:56.770 -0400	Get Activate License ({activationName, license})	0	script steps imported : 30
+2019-05-12 17:17:56.771 -0400	Get Deactivate License::8::Set Variable	1208	Function referred to in the calculation “GoDraw.JavaScript.Parameter ( "deactivateLicense" ; "" ; ""  )” is missing.
+2019-05-12 17:17:56.772 -0400	Get Deactivate License	0	script steps imported : 10
+2019-05-12 17:17:56.774 -0400	Get Start GoDraw Editor ({config, document, eventHandler, callback})::32::Set Variable	1208	Function referred to in the calculation “GoDraw.JavaScript.Parameter ( "startGoDraw" ; $options ; $callback )” is missing.
+2019-05-12 17:17:56.775 -0400	Get Start GoDraw Editor ({config, document, eventHandler, callback})::33::Perform Script	104	Script “<unknown>” missing.
+2019-05-12 17:17:56.776 -0400	Get Start GoDraw Editor ({config, document, eventHandler, callback})	0	script steps imported : 34
+2019-05-12 17:17:56.778 -0400	Load WebViewer App ( {webViewer; url , initialProps } )::21::Insert Text::Field	10	Attribute “id” missing.
+2019-05-12 17:17:56.783 -0400	Load WebViewer App ( {webViewer; url , initialProps } )	0	script steps imported : 67
+2019-05-12 17:17:56.791 -0400	Execute JavaScript ( { function, parameter, ...} )	0	script steps imported : 74
+2019-05-12 17:17:56.792 -0400	-	0	script steps imported : 0
+2019-05-12 17:17:56.793 -0400	Is WebViewer Loading	0	script steps imported : 2
+2019-05-12 17:17:56.794 -0400	Close WebViewer App	0	script steps imported : 5
+2019-05-12 17:17:56.795 -0400	--	0	script steps imported : 0
+2019-05-12 17:17:56.796 -0400	Private	0	script steps imported : 0
+2019-05-12 17:17:56.798 -0400	Compile Options {function, parameter, callback}	0	script steps imported : 26
+2019-05-12 17:17:56.803 -0400	Compile URL( url ; hash )	0	script steps imported : 43
+2019-05-12 17:17:56.804 -0400	--	0	script steps imported : 0
+2019-05-12 17:17:56.805 -0400	--	0	script steps imported : 0
+2019-05-12 17:17:56.805 -0400	TimeAllocations.fmp12	0	scripts imported : 23
+2019-05-12 17:17:56.806 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-12 17:28:32.320 -0400	TimeAllocations.fmp12	0	Import of scripts from clipboard started
+2019-05-12 17:28:32.469 -0400	Generate JSON object	0	script steps imported : 17
+2019-05-12 17:28:32.548 -0400	TimeAllocations.fmp12	0	scripts imported : 1
+2019-05-12 17:28:32.549 -0400	TimeAllocations.fmp12	0	Import completed
