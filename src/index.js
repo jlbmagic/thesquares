@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { CreateSquares } from "./CreateSquares";
-import { addMethods, callFMScript, initialProps } from "fm-webviewer-bridge";
+import { addMethods, callFMScript, initialProps } from "../src/util/api";
 
 // console.log(initialProps);
 const things = initialProps.data;
@@ -24,17 +24,31 @@ console.log(weekOf);
 // ];
 class Game extends React.Component {
   componentDidMount() {
-    // addMethods({
-    //   updateData: parameter => {
-    //     const theData = parameter.data;
-    //     this.setState({
-    //       data: theData
-    //     });
-    //     // console.log("updated");
-    //     // console.log(this.setState.data);
-    //   }
-    // });
+    addMethods({
+      updateData: parameter => {
+        const theData = parameter.data;
+        console.log(theData);
+        this.setState({
+          data: theData
+        });
+        console.log("updated");
+        // console.log(this.setState.data);
+      }
+    });
   }
+
+  clickOn = id => {
+    const returnValue = {
+      id
+    };
+    console.log(id);
+    callFMScript(
+      initialProps.fileName,
+      initialProps.eventHandler.clickOn,
+      JSON.stringify(returnValue)
+    );
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -62,6 +76,7 @@ class Game extends React.Component {
           <CreateSquares
             list={this.state.data}
             removeSquare={this.removeSquare}
+            onClickSquare={this.clickOn}
           />
         </div>
       </div>

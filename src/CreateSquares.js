@@ -20,6 +20,7 @@ export class CreateSquares extends React.Component {
     }
     const theArray = this.props.list;
     const remove = this.props.removeSquare;
+    const clickOn = this.props.onClickSquare;
     // console.log(remove);
     const things = shuffle(theArray);
     // console.log(things);
@@ -33,6 +34,7 @@ export class CreateSquares extends React.Component {
           value={v}
           color={ele.color}
           removeSquare={remove}
+          onClickSquare={clickOn}
         />
       );
       // return <h1>Hi</h1>;
