@@ -21,6 +21,7 @@ export class Square extends React.Component {
         onClick={() => this.removeItem(this.props.id)}
         style={{
           backgroundColor: this.props.color,
+
           color: "#000",
           width: this.props.width,
           height: this.props.height,
