@@ -14,10 +14,11 @@ export class UsedSection extends React.Component {
           key={ele.id}
           id={ele.id}
           value={v}
-          height={height}
+          height={height / 3}
           width={width}
           color={"#bdbfc1"}
           fontStyle={"italic"}
+          doClick={false}
         />
       );
       // return <h1>Hi</h1>;

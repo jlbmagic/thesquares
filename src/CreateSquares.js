@@ -40,6 +40,7 @@ export class CreateSquares extends React.Component {
           onClickSquare={clickOn}
           height={height}
           width={width}
+          doClick={true}
         />
       );
       // return <h1>Hi</h1>;
