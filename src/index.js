@@ -6,6 +6,8 @@ import { addMethods, callFMScript, initialProps } from "../src/util/api";
 import { SubHeading } from "./SubHeading";
 
 const things = initialProps.data;
+const thingsLength = things.length;
+console.log(thingsLength);
 export const weekOf = initialProps.weekOf;
 export const otherText = initialProps.otherText;
 export const complete = initialProps.complete;

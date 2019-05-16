@@ -1,5 +1,5 @@
 import React from "react";
-import { weekOf, complete, otherText } from "./SubHeading";
+// import { weekOf, complete, otherText } from "./SubHeading";
 export class Complete extends React.Component {
   constructor(props) {
     super(props);
