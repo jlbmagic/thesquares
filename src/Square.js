@@ -22,7 +22,7 @@ export class Square extends React.Component {
         style={{
           backgroundColor: this.props.color,
 
-          color: "#000",
+          color: this.props.textColor,
           width: this.props.width,
           height: this.props.height,
           justifyContent: "space-even"

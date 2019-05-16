@@ -35,6 +35,7 @@ export class CreateSquares extends React.Component {
           id={ele.id}
           value={v}
           color={ele.color}
+          textColor={ele.textColor}
           removeSquare={remove}
           onClickSquare={clickOn}
           height={height}

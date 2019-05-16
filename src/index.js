@@ -7,7 +7,7 @@ import { SubHeading } from "./SubHeading";
 
 const things = initialProps.data;
 export const weekOf = initialProps.weekOf;
-// console.log(initialProps);
+export const otherText = initialProps.otherText;
 export const complete = initialProps.complete;
 
 class Game extends React.Component {
@@ -22,9 +22,16 @@ class Game extends React.Component {
           data: theData,
           weekOf: weekOf,
           complete: complete,
-          change: true
+          change: true,
+          otherText: this.state.otherText
         });
         // console.log(this.state.complete);
+      },
+      updateComplete: parameter => {
+        this.setState({
+          complete: parameter.complete,
+          otherText: parameter.otherText
+        });
       }
     });
   }
@@ -47,7 +54,8 @@ class Game extends React.Component {
       data: things,
       weekOf: weekOf,
       complete: complete,
-      change: true
+      change: true,
+      otherText: otherText
     };
     this.removeSquare = this.removeSquare.bind(this);
   }
@@ -63,7 +71,11 @@ class Game extends React.Component {
       <div>
         <h1>My Time Allocation</h1>
 
-        <SubHeading weekOf={this.state.weekOf} complete={this.state.complete} />
+        <SubHeading
+          weekOf={this.state.weekOf}
+          complete={this.state.complete}
+          otherText={this.state.otherText}
+        />
 
         <div className="wrapper">
           <CreateSquares

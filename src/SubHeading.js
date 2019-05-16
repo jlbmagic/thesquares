@@ -1,25 +1,26 @@
 import React from "react";
-import { weekOf, complete } from "./index";
+// import { weekOf, complete } from "./index";
+import { Complete } from "./Complete";
 // console.log(weekOf);
 export class SubHeading extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       complete: this.props.complete,
-      weekOf: null
+      weekOf: this.props.weekOf,
+      otherText: this.props.otherText
     };
   }
 
   render() {
-    console.log(this.props);
-    const weekOf = this.props.weekOf;
-    console.log(weekOf);
+    const weekOf = this.state.weekOf;
     const complete = this.props.complete;
+    const otherText = this.props.otherText;
     return (
       <div>
         <p>{weekOf} </p>
         <br />
-        <p>{complete} </p>
+        <Complete complete={complete} otherText={otherText} />
       </div>
     );
   }
