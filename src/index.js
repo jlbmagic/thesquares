@@ -19,7 +19,7 @@ class Game extends React.Component {
         const theData = parameter.data;
         const complete = parameter.complete;
         const weekOf = parameter.weekOf;
-        // console.log(complete);
+        console.log(theData);
         this.setState({
           data: theData,
           weekOf: weekOf,
@@ -91,4 +91,5 @@ class Game extends React.Component {
     );
   }
 }
+
 ReactDOM.render(<Game />, document.getElementById("root"));
