@@ -26,9 +26,9 @@ html {
   width: 800;
   padding: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   align-items: baseline;
   flex-grow: 40px;
   gap: 40px;
@@ -37,7 +37,7 @@ html {
 }
 
 h1 {
-  color: #f90b6d;
+  color: #475728;
   font-family: "Open Sans", sans-serif;
   font-size: 34px;
   font-weight: 300;

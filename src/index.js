@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import update from "react-addons-update";
+// import update from "react-addons-update";
 import { CreateSquares } from "./CreateSquares";
 import { addMethods, callFMScript, initialProps } from "../src/util/api";
 import { SubHeading } from "./SubHeading";
@@ -29,7 +31,12 @@ class Game extends React.Component {
         });
         // console.log(this.state.complete);
       },
+      addOne: parameter => {
+        const theRow = parameter.data;
+        this.addTheRow(theRow);
+      },
       updateComplete: parameter => {
+        console.log(parameter);
         this.setState({
           complete: parameter.complete,
           otherText: parameter.otherText
@@ -60,6 +67,13 @@ class Game extends React.Component {
       otherText: otherText
     };
     this.removeSquare = this.removeSquare.bind(this);
+  }
+  addTheRow(row) {
+    const newData = update(this.state.data, { $push: [row] });
+    this.setState(prevState => ({
+      data: newData
+    }));
+    console.log(this.state.data);
   }
   removeSquare(square) {
     this.setState({

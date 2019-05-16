@@ -5,6 +5,7 @@
   "dependencies": {
     "fm-webviewer-bridge": "^0.3.2",
     "react": "^16.8.6",
+    "react-addons-update": "^15.6.2",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
