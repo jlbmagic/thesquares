@@ -12,10 +12,11 @@ html {
   background-color: #53f442;
   color: #fff;
   border-radius: 7px;
-  padding: 20px;
+  /* padding: 10px; */
   font-size: 100%;
   border: 0px;
   margin-right: 10px;
+  margin-top: 15px;
 }
 
 /* .box:nth-child(even) {
@@ -32,7 +33,7 @@ html {
   align-items: baseline;
   flex-grow: 40px;
   gap: 40px;
-  justify-content: space-left;
+  justify-content: space-between;
   grid-gap: 10px;
 }
 

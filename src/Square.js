@@ -15,13 +15,31 @@ export class Square extends React.Component {
   }
   render() {
     // console.log(this.props);
+    const doClick = this.props.doClick;
+    if (doClick) {
+      return (
+        <button
+          className={`box`}
+          onClick={() => this.removeItem(this.props.id)}
+          style={{
+            backgroundColor: this.props.color,
+            fontStyle: this.props.fontStyle,
+            color: this.props.textColor,
+            width: this.props.width,
+            height: this.props.height,
+            justifyContent: "space-even"
+          }}
+        >
+          {this.props.value}
+        </button>
+      );
+    }
     return (
       <button
         className={`box`}
-        onClick={() => this.removeItem(this.props.id)}
         style={{
           backgroundColor: this.props.color,
-
+          fontStyle: this.props.fontStyle,
           color: this.props.textColor,
           width: this.props.width,
           height: this.props.height,

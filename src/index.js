@@ -6,8 +6,9 @@ import update from "react-addons-update";
 import { CreateSquares } from "./CreateSquares";
 import { addMethods, callFMScript, initialProps } from "../src/util/api";
 import { SubHeading } from "./SubHeading";
-
+import { UsedSection } from "./Used";
 const things = initialProps.data;
+const used = initialProps.used;
 const thingsLength = things.length;
 console.log(thingsLength);
 export const weekOf = initialProps.weekOf;
@@ -61,6 +62,7 @@ class Game extends React.Component {
     super(props);
     this.state = {
       data: things,
+      used: used,
       weekOf: weekOf,
       complete: complete,
       change: true,
@@ -100,6 +102,12 @@ class Game extends React.Component {
             onClickSquare={this.clickOn}
             shuffle={this.state.change}
           />
+        </div>
+        <div className="wrapper">
+          <h1>Used</h1>
+          <div>
+            <UsedSection list={this.state.used} />
+          </div>
         </div>
       </div>
     );
