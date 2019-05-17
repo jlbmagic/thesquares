@@ -13,15 +13,8 @@ export class SubHeading extends React.Component {
   }
 
   render() {
-    const weekOf = this.state.weekOf;
     const complete = this.props.complete;
     const otherText = this.props.otherText;
-    return (
-      <div>
-        <p>{weekOf} </p>
-        <br />
-        <Complete complete={complete} otherText={otherText} />
-      </div>
-    );
+    return <Complete complete={complete} otherText={otherText} />;
   }
 }

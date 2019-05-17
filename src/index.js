@@ -9,8 +9,7 @@ import { SubHeading } from "./SubHeading";
 import { UsedSection } from "./Used";
 const things = initialProps.data;
 const used = initialProps.used;
-const thingsLength = things.length;
-console.log(thingsLength);
+// const thingsLength = things.length;
 export const weekOf = initialProps.weekOf;
 export const otherText = initialProps.otherText;
 export const complete = initialProps.complete;
@@ -22,22 +21,25 @@ class Game extends React.Component {
         const theData = parameter.data;
         const complete = parameter.complete;
         const weekOf = parameter.weekOf;
-        console.log(theData);
         this.setState({
           data: theData,
+          used: [],
           weekOf: weekOf,
           complete: complete,
           change: true,
           otherText: this.state.otherText
         });
-        // console.log(this.state.complete);
       },
       addOne: parameter => {
         const theRow = parameter.data;
         this.addTheRow(theRow);
       },
+      addUsed: parameter => {
+        const theRow = parameter.row;
+        this.updateUsed(theRow);
+      },
       updateComplete: parameter => {
-        console.log(parameter);
+        // alert("Complete");
         this.setState({
           complete: parameter.complete,
           otherText: parameter.otherText
@@ -75,11 +77,17 @@ class Game extends React.Component {
     this.setState(prevState => ({
       data: newData
     }));
-    console.log(this.state.data);
+  }
+  updateUsed(row) {
+    const newData = update(this.state.used, { $push: [row] });
+    this.setState(prevState => ({
+      used: newData
+    }));
   }
   removeSquare(square) {
     this.setState({
       data: this.state.data.filter(el => el.id !== square),
+
       change: false
     });
   }
@@ -103,8 +111,10 @@ class Game extends React.Component {
             shuffle={this.state.change}
           />
         </div>
+        <h1>Used</h1>
+
+        <p>What I've finished</p>
         <div className="wrapper">
-          <h1>Used</h1>
           <div>
             <UsedSection list={this.state.used} />
           </div>

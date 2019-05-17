@@ -9,7 +9,7 @@ export class Square extends React.Component {
     this.removeItem = this.removeItem.bind(this);
   }
   removeItem(e) {
-    // console.log(e);
+    console.log("E" + e);
     this.props.removeSquare(e);
     this.props.onClickSquare(e);
   }

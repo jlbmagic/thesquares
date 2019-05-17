@@ -1,0 +1,4 @@
+﻿Timestamp	Filename	Error	Message
+2019-05-16 20:17:37.213 -0400	TimeAllocations.fmp12	0	*** Started consistency check of improperly closed file, total of 102 block(s) to check
+2019-05-16 20:17:37.215 -0400	TimeAllocations.fmp12	0	Reset maximum block sequence number to 91710
+2019-05-16 20:17:37.215 -0400	TimeAllocations.fmp12	0	*** Completed consistency check, checked 102 block(s)
