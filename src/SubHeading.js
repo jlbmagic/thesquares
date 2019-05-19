@@ -8,13 +8,15 @@ export class SubHeading extends React.Component {
     this.state = {
       complete: this.props.complete,
       weekOf: this.props.weekOf,
-      otherText: this.props.otherText
+      finished: this.props.finished,
+      total: this.props.total
     };
   }
 
   render() {
     const complete = this.props.complete;
-    const otherText = this.props.otherText;
-    return <Complete complete={complete} otherText={otherText} />;
+    const finished = this.props.finished;
+    const total = this.props.total;
+    return <Complete complete={complete} finished={finished} total={total} />;
   }
 }

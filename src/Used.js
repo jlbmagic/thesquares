@@ -12,7 +12,7 @@ export class UsedSection extends React.Component {
       var v = ele.value;
       var height = ele.height / 3;
       height = height.toFixed(0);
-      const width = ele.width;
+      const width = "200px";
       return (
         <Square
           key={ele.id}

@@ -1,20 +1,28 @@
 import React from "react";
-// import { weekOf, complete, otherText } from "./SubHeading";
 export class Complete extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       complete: this.props.complete,
-      otherText: this.props.otherText
+      finished: this.props.finished,
+      total: this.props.total
     };
   }
   render() {
     const complete = this.props.complete;
-    const otherText = this.props.otherText;
+    const finished = this.props.finished;
+    const total = this.props.total;
     console.log(this.props);
     return (
       <div>
-        <p>{complete + " .................. " + otherText}</p>
+        <p>
+          {complete +
+            " .................. " +
+            finished +
+            " / " +
+            total +
+            " Accomplished"}
+        </p>
       </div>
     );
   }

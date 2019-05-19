@@ -24,10 +24,11 @@ export class Square extends React.Component {
           style={{
             backgroundColor: this.props.color,
             fontStyle: this.props.fontStyle,
+            fontSize: "100%",
             color: this.props.textColor,
             width: this.props.width,
-            height: this.props.height,
-            justifyContent: "space-even"
+            height: this.props.height
+            // justifyContent: "space-even"
           }}
         >
           {this.props.value}
@@ -39,11 +40,12 @@ export class Square extends React.Component {
         className={`box`}
         style={{
           backgroundColor: this.props.color,
-          fontStyle: this.props.fontStyle,
+          fontStyle: "italic",
+          fontSize: "100%",
           color: this.props.textColor,
           width: this.props.width,
-          height: this.props.height,
-          justifyContent: "space-even"
+          height: this.props.height
+          // justifyContent: "space-even"
         }}
       >
         {this.props.value}

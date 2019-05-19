@@ -9,12 +9,13 @@ import { SubHeading } from "./SubHeading";
 import { UsedSection } from "./Used";
 const things = initialProps.data;
 const used = initialProps.used;
-// const thingsLength = things.length;
-export const weekOf = initialProps.weekOf;
-export const otherText = initialProps.otherText;
-export const complete = initialProps.complete;
 
-class Game extends React.Component {
+const weekOf = initialProps.weekOf;
+const finished = initialProps.finished;
+const total = initialProps.total;
+const complete = initialProps.complete;
+
+class App extends React.Component {
   componentDidMount() {
     addMethods({
       updateData: parameter => {
@@ -42,17 +43,17 @@ class Game extends React.Component {
         // alert("Complete");
         this.setState({
           complete: parameter.complete,
-          otherText: parameter.otherText
+          finished: parameter.finished,
+          total: parameter.total
         });
       }
     });
   }
-
+  //Functions
   clickOn = id => {
     const returnValue = {
       id
     };
-    // console.log(id);
     callFMScript(
       initialProps.fileName,
       initialProps.eventHandler.clickOn,
@@ -68,7 +69,8 @@ class Game extends React.Component {
       weekOf: weekOf,
       complete: complete,
       change: true,
-      otherText: otherText
+      finished: finished,
+      total: total
     };
     this.removeSquare = this.removeSquare.bind(this);
   }
@@ -87,21 +89,16 @@ class Game extends React.Component {
   removeSquare(square) {
     this.setState({
       data: this.state.data.filter(el => el.id !== square),
-
       change: false
     });
+    console.log(this.state.data.length - 1);
   }
 
   render() {
     return (
       <div>
         <h1>My Time Allocation</h1>
-
-        <SubHeading
-          weekOf={this.state.weekOf}
-          complete={this.state.complete}
-          otherText={this.state.otherText}
-        />
+        <h2>To Do</h2>
 
         <div className="wrapper">
           <CreateSquares
@@ -111,9 +108,15 @@ class Game extends React.Component {
             shuffle={this.state.change}
           />
         </div>
-        <h1>Used</h1>
+        <h2>Completed</h2>
 
-        <p>What I've finished</p>
+        <SubHeading
+          weekOf={this.state.weekOf}
+          complete={this.state.complete}
+          finished={this.state.finished}
+          total={this.state.total}
+        />
+
         <div className="wrapper">
           <div>
             <UsedSection list={this.state.used} />
@@ -123,5 +126,10 @@ class Game extends React.Component {
     );
   }
 }
+class Done extends React.Component {
+  render() {
+    return <h1>You're DONE!!!</h1>;
+  }
+}
 
-ReactDOM.render(<Game />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
