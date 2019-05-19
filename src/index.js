@@ -7,16 +7,76 @@ import { CreateSquares } from "./CreateSquares";
 import { addMethods, callFMScript, initialProps } from "../src/util/api";
 import { SubHeading } from "./SubHeading";
 import { UsedSection } from "./Used";
-const things = initialProps.data;
-const used = initialProps.used;
 
+const fakeObject = {
+  fakeUsed: [
+    {
+      color: "#D94A39",
+      height: "55px",
+      id: "4134671345795014845590424181703934643590751683018457687385",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    }
+  ],
+  weekOf: "Week Of Demo",
+  finished: 0,
+  total: 300,
+  complete: "0% Complete",
+  fakeData: [
+    {
+      color: "#D94A39",
+      height: "55px",
+      id: "4134671345795014845590424181703934643590751683018457687385",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    },
+    {
+      color: "#703121",
+      height: "30px",
+      id: "2750294889470691827309273423544858828948622861345218733114",
+      textColor: "#fff",
+      value: "Games",
+      width: "100px"
+    },
+    {
+      color: "#475728",
+      height: "30px",
+      id: "1738674765866488788860184411880696358586384674992535914251",
+      textColor: "#fff",
+      value: "Learn",
+      width: "150px"
+    },
+    {
+      color: "#475728",
+      height: "30px",
+      id: "5578218013017412491407600177095475366495893629440942971328",
+      textColor: "#fff",
+      value: "Learn",
+      width: "150px"
+    },
+    {
+      color: "#D94A39",
+      height: "55px",
+      id: "4208582403733224181648151226670192420901263457170943033449",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    }
+  ]
+};
+// const thisProps = initialProps ? initialProps : fakeObject;
 const weekOf = initialProps.weekOf;
 const finished = initialProps.finished;
 const total = initialProps.total;
 const complete = initialProps.complete;
+const used = initialProps.used;
 
+const things = initialProps.data;
 class App extends React.Component {
   componentDidMount() {
+    //FileMaker Methods
     addMethods({
       updateData: parameter => {
         const theData = parameter.data;
@@ -40,7 +100,6 @@ class App extends React.Component {
         this.updateUsed(theRow);
       },
       updateComplete: parameter => {
-        // alert("Complete");
         this.setState({
           complete: parameter.complete,
           finished: parameter.finished,
