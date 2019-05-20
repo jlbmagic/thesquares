@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import update from "react-addons-update";
-// import update from "react-addons-update";
 import { CreateSquares } from "./CreateSquares";
 import { addMethods, callFMScript, initialProps } from "../src/util/api";
 import { SubHeading } from "./SubHeading";
@@ -66,7 +65,6 @@ const fakeObject = {
     }
   ]
 };
-// const thisProps = initialProps ? initialProps : fakeObject;
 const weekOf = initialProps.weekOf;
 const finished = initialProps.finished;
 const total = initialProps.total;
@@ -76,7 +74,6 @@ const used = initialProps.used;
 const things = initialProps.data;
 class App extends React.Component {
   componentDidMount() {
-    //FileMaker Methods
     addMethods({
       updateData: parameter => {
         const theData = parameter.data;
