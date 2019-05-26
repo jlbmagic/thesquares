@@ -22,11 +22,13 @@ export class CreateSquares extends React.Component {
       return array;
     }
     const theArray = this.props.list;
+    console.log(theArray);
     const remove = this.props.removeSquare;
     const clickOn = this.props.onClickSquare;
     const things = change ? shuffle(theArray) : theArray;
     const rows = things.map(function(ele, i) {
       var v = ele.value;
+      // console.log("V" + v);
       const height = ele.height;
       const width = ele.width;
       return (

@@ -1,5 +1,4 @@
 import React from "react";
-
 export class Square extends React.Component {
   constructor(props) {
     super(props);
@@ -9,6 +8,7 @@ export class Square extends React.Component {
     this.removeItem = this.removeItem.bind(this);
   }
   removeItem(e) {
+    console.log("E" + e);
     this.props.removeSquare(e);
     this.props.onClickSquare(e);
   }
@@ -33,7 +33,7 @@ export class Square extends React.Component {
       );
     }
     return (
-      <div
+      <button
         className={`box`}
         style={{
           backgroundColor: this.props.color,
@@ -45,7 +45,7 @@ export class Square extends React.Component {
         }}
       >
         {this.props.value}
-      </div>
+      </button>
     );
   }
 }
