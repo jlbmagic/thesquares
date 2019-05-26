@@ -104,3 +104,36 @@
 2019-05-19 13:01:43.626 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
 2019-05-19 13:01:43.627 -0400	UpdateComplete	0	script steps imported : 2
 2019-05-19 13:01:43.628 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-22 06:54:26.587 -0400	TimeAllocations.fmp12	0	Import of themes from file “karbon_kontacts.fmp12” started
+2019-05-22 06:54:27.025 -0400	TimeAllocations.fmp12	0	themes imported : 1
+2019-05-22 06:54:27.025 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-22 07:11:12.405 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-22 07:11:12.413 -0400	Example_CollectUsed	0	script steps imported : 2
+2019-05-22 07:11:12.414 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-23 07:31:03.035 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-23 07:31:03.038 -0400	Example_Update Data	0	script steps imported : 1
+2019-05-23 07:31:03.038 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-23 07:31:20.827 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-23 07:31:20.833 -0400	Example_Collect Data	0	script steps imported : 1
+2019-05-23 07:31:20.833 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 08:33:28.312 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 08:33:28.320 -0400	UpdateComplete	0	script steps imported : 2
+2019-05-25 08:33:28.320 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 10:30:03.909 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 10:30:03.912 -0400	NewCategory	0	script steps imported : 3
+2019-05-25 10:30:03.912 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 20:01:15.468 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 20:01:15.469 -0400	CollectUsed	0	script steps imported : 1
+2019-05-25 20:01:15.470 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 20:03:17.238 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 20:03:17.245 -0400	CollectUsed	0	script steps imported : 1
+2019-05-25 20:03:17.245 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 20:03:20.298 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 20:03:20.304 -0400	CollectUsed	0	script steps imported : 1
+2019-05-25 20:03:20.304 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 20:03:50.594 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 20:03:50.601 -0400	CollectUsed	0	script steps imported : 1
+2019-05-25 20:03:50.601 -0400	TimeAllocations.fmp12	0	Import completed
+2019-05-25 20:09:01.290 -0400	TimeAllocations.fmp12	0	Import of script steps from clipboard started
+2019-05-25 20:09:01.298 -0400	Add Row Setup	0	script steps imported : 7
+2019-05-25 20:09:01.299 -0400	TimeAllocations.fmp12	0	Import completed

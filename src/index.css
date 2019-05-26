@@ -32,7 +32,7 @@ html {
   flex-wrap: wrap;
   flex-flow: wrap;
   flex-grow: 40px;
-  gap: 40px;
+  /* gap: 40px; */
   justify-content: space-between;
   grid-gap: 10px;
 }
@@ -40,21 +40,21 @@ html {
 h1 {
   color: #7c795d;
   font-family: "Trocchi", serif;
-  font-size: 45px;
+  /* font-size: 45px; */
   font-weight: normal;
   text-align: center;
-  line-height: 48px;
+  /* line-height: 48px; */
   margin: 0;
 }
 
 h2 {
   color: #7c795d;
   font-family: "Trocchi", serif;
-  font-size: 28px;
+  /* font-size: 28px; */
   font-weight: 400;
   background-color: "blue";
-  line-height: 32px;
-  margin: 50px 20px 10px 0;
+  /* line-height: 32px; */
+  /* margin: 50px 20px 10px 0; */
 }
 
 .subheader {

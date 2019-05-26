@@ -4,15 +4,11 @@ import { Square } from "./Square";
 export class UsedSection extends React.Component {
   render() {
     const theArray = this.props.list;
-
-    // if (theArray === null) {
-    //   return [];
-    // }
     const rows = theArray.map(function(ele, i) {
       var v = ele.value;
       var height = ele.height / 3;
       height = height.toFixed(0);
-      const width = "200px";
+      const width = "125px";
       return (
         <Square
           key={ele.id}
