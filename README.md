@@ -18,7 +18,7 @@ https://www.geistinteractive.com/products/widgetstudio/
 
 ##To see the result of the React App in full functionality:
 
-1.  Download the trial of FileMaker Pro 18 Advanced
+1.  Download the trial of FileMaker Pro 18 Advanced: https://www.filemaker.com/trial/
 2.  Open the TimeAllocations.fmp12 file in FileMaker.
 
 ##Preview Video
