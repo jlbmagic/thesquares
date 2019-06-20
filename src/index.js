@@ -6,13 +6,221 @@ import { CreateSquares } from "./CreateSquares";
 import { addMethods, callFMScript, initialProps } from "../src/util/api";
 import { SubHeading } from "./SubHeading";
 import { UsedSection } from "./Used";
+const realData = initialProps;
+const fakeData = {
+  complete: "21% Complete",
+  data: [
+    {
+      color: "#8DCCAD",
+      height: "55px",
+      id: "5111660688047374564113853369165300245217632213206129791180",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    },
+    {
+      color: "#8DCCAD",
+      height: "55px",
+      id: "3623581401722931622176586406151386416150023246320027617950",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    },
+    {
+      color: "#8DCCAD",
+      height: "55px",
+      id: "3758067438001479510512316406169809920083518147661076573648",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    },
+    {
+      color: "#8DCCAD",
+      height: "55px",
+      id: "4047989876155750703185785675256883586399455461814661761587",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    },
+    {
+      color: "#988864",
+      height: "55px",
+      id: "5809067514885044777965997215630222093933682648693976870903",
+      textColor: "#000",
+      value: "Learn",
+      width: "150px"
+    },
+    {
+      color: "#988864",
+      height: "55px",
+      id: "4819270337167531721021340245316141310146869372401023521186",
+      textColor: "#000",
+      value: "Learn",
+      width: "150px"
+    },
+    {
+      color: "#FEA6A2",
+      height: "55px",
+      id: "3529335551940539730936260680439388755015460604109398634943",
+      textColor: "#000",
+      value: "Movies",
+      width: "100px"
+    },
+    {
+      color: "#FEA6A2",
+      height: "55px",
+      id: "1858431869395265419480569179366245267582616008330240528469",
+      textColor: "#000",
+      value: "Movies",
+      width: "100px"
+    },
+    {
+      color: "#F9D6AC",
+      height: "55px",
+      id: "6227203779462993774041950024598011567203924399896041323872",
+      textColor: "#000",
+      value: "Read",
+      width: "125px"
+    },
+    {
+      color: "#F9D6AC",
+      height: "55px",
+      id: "2209493141704993119442216382397440686157029275632534028858",
+      textColor: "#000",
+      value: "Read",
+      width: "125px"
+    },
+    {
+      color: "#F9D6AC",
+      height: "55px",
+      id: "5359937573193709181735451915133367647481815585446408691172",
+      textColor: "#000",
+      value: "Read",
+      width: "125px"
+    },
+    {
+      color: "#F9D6AC",
+      height: "55px",
+      id: "853709372218176662716332855143135073688953018129216626185",
+      textColor: "#000",
+      value: "Read",
+      width: "125px"
+    },
+    {
+      color: "#FFE9AF",
+      height: "55px",
+      id: "4095568822513833968917520528525271689960546683073533299192",
+      textColor: "#000",
+      value: "Workout",
+      width: "200px"
+    },
+    {
+      color: "#FFE9AF",
+      height: "55px",
+      id: "1701605126564998313395508854469606705857332739489915654146",
+      textColor: "#000",
+      value: "Workout",
+      width: "200px"
+    },
+    {
+      color: "#05703b",
+      height: "55px",
+      id: "3006274254679521430116963383166144966348360933452722209178",
+      textColor: "#fff",
+      value: "WIth Spouse",
+      width: "125px"
+    },
+    {
+      color: "#05703b",
+      height: "55px",
+      id: "2846850041514705139511104498469064722586540159062981313781",
+      textColor: "#fff",
+      value: "WIth Spouse",
+      width: "125px"
+    },
+    {
+      color: "#05703b",
+      height: "55px",
+      id: "1401208100157555324737100234574476816767912259411368852031",
+      textColor: "#fff",
+      value: "WIth Spouse",
+      width: "125px"
+    },
+    {
+      color: "#05703b",
+      height: "55px",
+      id: "6161902254732832614329065950999541980568225065800129972358",
+      textColor: "#fff",
+      value: "WIth Spouse",
+      width: "125px"
+    },
+    {
+      color: "#05703b",
+      height: "55px",
+      id: "2475146540387893402376002635968263946893439068582167557618",
+      textColor: "#fff",
+      value: "WIth Spouse",
+      width: "125px"
+    }
+  ],
+  eventHandler: {
+    clickOn: "clickOn"
+  },
+  fileName: "TimeAllocations",
+  finished: 5,
+  total: 24,
+  used: [
+    {
+      color: "#8DCCAD",
+      height: "55px",
+      id: "69402714994886781351813634796681532395079497546650420901",
+      textColor: "#000",
+      value: "Dogs",
+      width: "200px"
+    },
+    {
+      color: "#988864",
+      height: "55px",
+      id: "262032840531552445379285982225016730404543904557809665905",
+      textColor: "#000",
+      value: "Learn",
+      width: "150px"
+    },
+    {
+      color: "#F9D6AC",
+      height: "55px",
+      id: "3509234655577083177110982868037397545732116798218846935736",
+      textColor: "#000",
+      value: "Read",
+      width: "125px"
+    },
+    {
+      color: "#FFE9AF",
+      height: "55px",
+      id: "2796355656124018583570160957242098315860726804846633895394",
+      textColor: "#000",
+      value: "Workout",
+      width: "200px"
+    },
+    {
+      color: "#05703b",
+      height: "55px",
+      id: "1416732321692089760485714290327384731938247006363647130483",
+      textColor: "#fff",
+      value: "WIth Spouse",
+      width: "125px"
+    }
+  ],
+  weekOf: "6/16/2019 - 6/22/2019"
+};
 
-const weekOf = initialProps.weekOf;
-const finished = initialProps.finished;
-const total = initialProps.total;
-const complete = initialProps.complete;
-const used = initialProps.used;
-const things = initialProps.data;
+const useData = realData ? realData : fakeData;
+const weekOf = useData.weekOf;
+const finished = useData.finished;
+const total = useData.total;
+const complete = useData.complete;
+const used = useData.used;
+const things = useData.data;
 
 class App extends React.Component {
   constructor(props) {
@@ -67,8 +275,8 @@ class App extends React.Component {
       id
     };
     callFMScript(
-      initialProps.fileName,
-      initialProps.eventHandler.clickOn,
+      useData.fileName,
+      useData.eventHandler.clickOn,
       JSON.stringify(returnValue)
     );
   };

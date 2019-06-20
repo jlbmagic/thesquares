@@ -1,5 +1,32 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##This project for a FileMaker custom app. FileMaker is a "Workplace Innovation Platform" and is the platform I build databases and custom apps for clients.
+You can read more about FileMaker here:
+https://www.filemaker.com/
+
+The FileMaker platform works natively with FileMaker inside of a "web viewer" object. We can run any JS in there, and it's useful to do so to provide clients with modern and interactive interfaces. I've written a lot about using JS in FileMaker.
+https://www.geistinteractive.com/filemaker-javascript/
+https://www.geistinteractive.com/?s=javascript
+
+I'm actually teaching a full-day training session on JS and FileMaker at our annual conference. (If you want to come I have a free registration for you! ☺)
+https://www.filemaker.com/learning/devcon/2019/tracks.html
+
+I work for a company called "Geist Interactive". We have many web-apps that use JS and, more recently use React. I didn't build them, but I tried to understand them.
+https://www.geistinteractive.com/products/filemaker-rich-text-editor/
+https://www.geistinteractive.com/products/filemaker-kanban/
+https://www.geistinteractive.com/products/widgetstudio/
+
+##To see the result of the React App in full functionality:
+
+1.  Download the trial of FileMaker Pro 18 Advanced
+2.  Open the TimeAllocations.fmp12 file in FileMaker.
+
+##Preview Video
+Here I show you what the full-functioninig app looks like.
+https://vimeo.com/343508103/a8d5dc7fd8
+
+---
+
 ## Available Scripts
 
 In the project directory, you can run:
