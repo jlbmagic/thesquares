@@ -1,51 +1,17 @@
-import React from "react";
-export class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null
-    };
-    this.removeItem = this.removeItem.bind(this);
-  }
-  removeItem(e) {
-    console.log("E" + e);
-    this.props.removeSquare(e);
-    this.props.onClickSquare(e);
-  }
-  render() {
-    const doClick = this.props.doClick;
-    if (doClick) {
-      return (
-        <button
-          className={`box`}
-          onClick={() => this.removeItem(this.props.id)}
-          style={{
-            backgroundColor: this.props.color,
-            fontStyle: this.props.fontStyle,
-            fontSize: "100%",
-            color: this.props.textColor,
-            width: this.props.width,
-            height: this.props.height
-          }}
-        >
-          {this.props.value}
-        </button>
-      );
-    }
-    return (
-      <button
-        className={`box`}
-        style={{
-          backgroundColor: this.props.color,
-          fontStyle: "italic",
-          fontSize: "100%",
-          color: this.props.textColor,
-          width: this.props.width,
-          height: this.props.height
-        }}
-      >
-        {this.props.value}
-      </button>
-    );
-  }
+import React from 'react'
+
+function Square({style, className = '', ...props}) {
+  return (
+    <button
+      className={`box ${className}`}
+      style={{
+        fontStyle: 'italic',
+        fontSize: '100%',
+        ...style,
+      }}
+      {...props}
+    />
+  )
 }
+
+export {Square}
